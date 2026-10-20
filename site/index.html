@@ -16,6 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js" defer></script>
 </head>
 <body>
 
@@ -64,19 +66,19 @@
   <div class="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat">
+        <div class="stat" data-reveal>
           <p class="stat-value">I-956F approved</p>
           <p class="stat-label">USCIS · 19 Feb 2026</p>
         </div>
-        <div class="stat">
+        <div class="stat" data-reveal>
           <p class="stat-value">10 buildings</p>
           <p class="stat-label">Apartment community</p>
         </div>
-        <div class="stat">
+        <div class="stat" data-reveal>
           <p class="stat-value">$800,000</p>
           <p class="stat-label">Current TEA minimum</p>
         </div>
-        <div class="stat">
+        <div class="stat" data-reveal>
           <p class="stat-value">31 Dec 2026</p>
           <p class="stat-label">Filing deadline</p>
         </div>
@@ -84,47 +86,51 @@
     </div>
   </div>
 
-  <section class="band">
-    <div class="container split">
-      <div class="split-head">
-        <p class="eyebrow eyebrow-green">The project</p>
-        <h2>Built to be operated, not flipped</h2>
+  <section class="band feature-band">
+    <div class="container feature">
+      <div class="feature-copy">
+        <p class="eyebrow eyebrow-green" data-reveal>The project</p>
+        <h2 data-reveal>Built to be operated, not flipped</h2>
+        <p data-reveal>Gracious Gardens is a ten-building apartment community in Waller, Texas, within the Houston metropolitan area. Finishes Solutions is the developer, and operates the assets it builds — land acquisition through long-term operations under one roof.</p>
+        <p data-reveal>The project received approval of its Form I-956F from U.S. Citizenship and Immigration Services on 19 February 2026. It sits in a designated High Unemployment Targeted Area, which qualifies subscribing investors for the reserved visa category and its priority processing.</p>
       </div>
-      <div class="split-body">
-      <p>Gracious Gardens is a ten-building apartment community in Waller, Texas, within the Houston metropolitan area. Finishes Solutions is the developer, and operates the assets it builds — land acquisition through long-term operations under one roof.</p>
-      <p>The project received approval of its Form I-956F from U.S. Citizenship and Immigration Services on 19 February 2026. It sits in a designated High Unemployment Targeted Area, which qualifies subscribing investors for the reserved visa category and its priority processing.</p>
+      <div class="mark-frame" data-reveal-mark aria-hidden="true">
+        <div class="mark-photo">
+          <img src="assets/photos/gg-aerial-1600.webp" srcset="assets/photos/gg-aerial-800.webp 800w, assets/photos/gg-aerial-1600.webp 1600w" sizes="(max-width:900px) 80vw, 460px" width="1600" height="1074" loading="lazy" alt="" data-parallax>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="band gallery-band" aria-labelledby="gallery-heading">
     <div class="container stack">
-      <p class="eyebrow eyebrow-green">The community</p>
-      <h2 id="gallery-heading">A closer look</h2>
+      <p class="eyebrow eyebrow-green" data-reveal>The community</p>
+      <h2 id="gallery-heading" data-reveal>A closer look</h2>
       <div class="gallery">
-        <div class="gallery-item gallery-wide">
-          <img src="assets/photos/gg-aerial-1600.webp" srcset="assets/photos/gg-aerial-800.webp 800w, assets/photos/gg-aerial-1600.webp 1600w" sizes="(max-width:1240px) 100vw, 1192px" width="1600" height="1074" loading="lazy" alt="Aerial view of three-story apartment buildings and parking along a river, backed by pine forest">
+        <div class="gallery-item gallery-wide" data-reveal>
+          <img src="assets/photos/gg-aerial-1600.webp" srcset="assets/photos/gg-aerial-800.webp 800w, assets/photos/gg-aerial-1600.webp 1600w" sizes="(max-width:1240px) 100vw, 1192px" width="1600" height="1074" loading="lazy" alt="Rendering: Aerial view of three-story apartment buildings and parking along a river, backed by pine forest">
         </div>
-        <div class="gallery-item">
-          <img src="assets/photos/gg-exterior-1600.webp" srcset="assets/photos/gg-exterior-800.webp 800w, assets/photos/gg-exterior-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="Row of three-story apartment buildings beside a landscaped parking area">
+        <div class="gallery-item" data-reveal>
+          <img src="assets/photos/gg-exterior-1600.webp" srcset="assets/photos/gg-exterior-800.webp 800w, assets/photos/gg-exterior-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="Rendering: Row of three-story apartment buildings beside a landscaped parking area">
         </div>
-        <div class="gallery-item">
-          <img src="assets/photos/gg-courtyard-1600.webp" srcset="assets/photos/gg-courtyard-800.webp 800w, assets/photos/gg-courtyard-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="Two apartment buildings facing each other across parking, with a walkway between them">
+        <div class="gallery-item" data-reveal>
+          <img src="assets/photos/gg-courtyard-1600.webp" srcset="assets/photos/gg-courtyard-800.webp 800w, assets/photos/gg-courtyard-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="Rendering: Two apartment buildings facing each other across parking, with a walkway between them">
         </div>
-        <div class="gallery-item">
-          <img src="assets/photos/gg-drive-1600.webp" srcset="assets/photos/gg-drive-800.webp 800w, assets/photos/gg-drive-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="View from a timber-framed stair landing down the main drive between apartment buildings">
+        <div class="gallery-item" data-reveal>
+          <img src="assets/photos/gg-drive-1600.webp" srcset="assets/photos/gg-drive-800.webp 800w, assets/photos/gg-drive-1600.webp 1600w" sizes="(max-width:900px) 100vw, 400px" width="1600" height="1074" loading="lazy" alt="Rendering: View from a timber-framed stair landing down the main drive between apartment buildings">
         </div>
       </div>
+      <p class="gallery-note" data-reveal>Renderings. The completed project may differ.</p>
     </div>
   </section>
 
   <section class="band sunken" id="what-is-eb5">
     <div class="container split">
-      <div class="split-head">
+      <div class="split-head" data-reveal>
         <p class="eyebrow eyebrow-green">The program</p>
         <h2>What EB-5 is</h2>
       </div>
-      <div class="split-body">
+      <div class="split-body" data-reveal>
       <p>The EB-5 Immigrant Investor Program is a United States visa category. An investor places capital in a qualifying U.S. project that creates at least ten American jobs, and may then petition for permanent residency for themselves, a spouse, and unmarried children under 21.</p>
       <p>It does not require an employer sponsor, a lottery entry, or a PERM labor certification. It does require that the capital be genuinely at risk, and eligibility depends on facts particular to each investor — which is why any conversation starts with your circumstances rather than ours.</p>
       <div class="note">
@@ -136,12 +142,12 @@
   </section>
 
   <div class="cta">
-    <img src="assets/gg-mark-white.png" alt="">
+    <img src="assets/gg-mark-white.png" alt="" data-parallax>
     <div class="container">
-      <p class="eyebrow">Speak with the team</p>
-      <h2>Start with your circumstances, <span class="hl">not our pitch</span></h2>
-      <p>A short call covering the project, the process, and whether EB-5 is a sensible route for you. No obligation, and we will tell you plainly if it is not.</p>
-      <a class="btn btn-inverse btn-lg" href="https://bookings.cloud.microsoft/book/GraciousGardensEB51@finishesetc.net/">Book a time</a>
+      <p class="eyebrow" data-reveal>Speak with the team</p>
+      <h2 data-reveal>Start with your circumstances, <span class="hl">not our pitch</span></h2>
+      <p data-reveal>A short call covering the project, the process, and whether EB-5 is a sensible route for you. No obligation, and we will tell you plainly if it is not.</p>
+      <a data-reveal class="btn btn-inverse btn-lg" href="https://bookings.cloud.microsoft/book/GraciousGardensEB51@finishesetc.net/">Book a time</a>
     </div>
   </div>
 
