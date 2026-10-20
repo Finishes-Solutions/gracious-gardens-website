@@ -7,6 +7,24 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const header = document.querySelector('.site-header');
 
+  // Count-up for numbers like $800,000 once their stat scrolls into view.
+  const easeOut = (t) => 1 - Math.pow(1 - t, 4);
+  const countUp = (el) => {
+    const target = Number(el.dataset.count);
+    const start = performance.now();
+    const duration = 1600;
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      el.textContent = Math.round(target * easeOut(t)).toLocaleString('en-US');
+      if (t < 1) window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
+  };
+  const reveal = (el) => {
+    el.classList.add('is-in');
+    if (!reduceMotion) el.querySelectorAll('[data-count]').forEach(countUp);
+  };
+
   // Reveal on scroll, staggering siblings that enter together.
   const targets = document.querySelectorAll('[data-reveal], [data-reveal-mark]');
   if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -15,11 +33,12 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
+        reveal(entry.target);
         observer.unobserve(entry.target);
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
+    document.querySelectorAll('[data-count]').forEach((el) => { el.textContent = '0'; });
     targets.forEach((el) => {
       const siblings = [...el.parentElement.children].filter((c) => c.hasAttribute('data-reveal'));
       const index = siblings.indexOf(el);
