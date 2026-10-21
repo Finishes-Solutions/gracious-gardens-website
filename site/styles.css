@@ -247,6 +247,7 @@ p{margin:0}
 .email-card{position:sticky;top:96px;border-top:3px solid var(--green-500);border-radius:var(--leaf-sm)}
 .email-card .btn{align-self:flex-start}
 .email-alt{font-size:0.9375rem;color:var(--text-muted);overflow-wrap:anywhere}
+.email-alt a,.hero-note a,.cta-alt a{white-space:nowrap}
 .checklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)}
 .checklist li{position:relative;padding-left:1.75rem}
 .checklist li::before{
@@ -283,8 +284,8 @@ p{margin:0}
 .footer-brand img{height:46px;width:auto;align-self:flex-start;max-width:none}
 .footer-brand p{font-size:0.875rem;line-height:1.6;color:var(--ink-400)}
 .footer-col h2{font-family:var(--font-mono);font-size:0.6875rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green-400);margin-bottom:var(--space-4)}
-.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--space-3)}
-.footer-col a{font-size:0.875rem;color:var(--ink-300);text-decoration:none}
+.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--space-1,0.25rem)}
+.footer-col a{display:inline-block;padding-block:0.5rem;font-size:0.875rem;color:var(--ink-300);text-decoration:none}
 .footer-col a:hover{color:var(--white);text-decoration:underline}
 .footer-legal{border-top:1px solid rgba(255,255,255,0.1)}
 .footer-legal .container{padding-block:var(--space-5);display:flex;flex-direction:column;gap:var(--space-4)}
@@ -318,6 +319,11 @@ p{margin:0}
   .hero .btn-group .btn{flex:1 1 100%}
   .hero-photo::before{background-image:linear-gradient(180deg,rgba(11,13,12,0.6) 0%,rgba(11,13,12,0.88) 100%)}
   .brand-link img{height:34px}
+}
+@media (max-width:400px){
+  :root{--gutter:1rem}
+  .brand-link img{height:30px}
+  .site-header .container{gap:var(--space-3)}
 }
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
