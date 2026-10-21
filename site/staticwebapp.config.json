@@ -1,0 +1,23 @@
+{
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "routes": [
+    {
+      "route": "/assets/*",
+      "headers": {
+        "Cache-Control": "public, max-age=86400"
+      }
+    }
+  ],
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  }
+}
