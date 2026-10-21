@@ -331,7 +331,7 @@ p{margin:0}
   @keyframes gg-line{from{transform:translateY(110%)}to{transform:none}}
   @keyframes gg-settle{from{scale:1.24}to{scale:1.12}}
   @keyframes gg-show{to{opacity:1;transform:none}}
-  @keyframes gg-unwipe{to{clip-path:inset(0 0 0 0)}}
+  @keyframes gg-uncover{to{transform:scaleY(0)}}
 
   /* Hero: photo settles in, then drifts slower than the page on scroll */
   .hero-img{animation:gg-settle 2.6s var(--ease-smooth) both;translate:0 calc(var(--p,0) * 36px);will-change:transform}
@@ -352,13 +352,17 @@ p{margin:0}
   }
   html.js [data-reveal].is-in{opacity:1;transform:none}
 
-  /* Gallery: wipe up from the bottom while the image settles from a slight zoom */
-  html.js [data-reveal="wipe"]{
-    opacity:1;transform:none;clip-path:inset(100% 0 0 0);
-    transition:clip-path 1.2s var(--ease-smooth) var(--reveal-delay,0ms);
+  /* Gallery: a curtain in the page colour slides away (bottom first) while the
+     image settles from a slight zoom. The image itself is never clipped, so the
+     browser always sees it and the reveal reliably fires. */
+  html.js [data-reveal="wipe"]{opacity:1;transform:none;position:relative}
+  html.js [data-reveal="wipe"]::after{
+    content:"";position:absolute;inset:-1px;z-index:1;background:var(--surface-page);
+    transform-origin:50% 0;
+    transition:transform 1.2s var(--ease-smooth) var(--reveal-delay,0ms);
   }
   html.js [data-reveal="wipe"] img{scale:1.18;transition:scale 1.8s var(--ease-smooth) var(--reveal-delay,0ms),transform 1.2s var(--ease-smooth)}
-  html.js [data-reveal="wipe"].is-in{clip-path:inset(0 0 0 0)}
+  html.js [data-reveal="wipe"].is-in::after{transform:scaleY(0)}
   html.js [data-reveal="wipe"].is-in img{scale:1}
 
   /* Leaf mark: the green mark spins in, the photo mark follows on the same path
@@ -378,7 +382,7 @@ p{margin:0}
   html.js:not(.js-ready) [data-reveal],
   html.js:not(.js-ready) [data-reveal-mark] .mark-photo,
   html.js:not(.js-ready) [data-reveal-mark]::before{animation:gg-show 0.6s ease 2.5s forwards}
-  html.js:not(.js-ready) [data-reveal="wipe"]{animation:gg-unwipe 0.6s ease 2.5s forwards}
+  html.js:not(.js-ready) [data-reveal="wipe"]::after{animation:gg-uncover 0.6s ease 2.5s forwards}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition-duration:0.01ms!important;animation-duration:0.01ms!important}
