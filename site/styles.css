@@ -23,9 +23,9 @@
   --border-default:var(--ink-200);
 
   /* Type */
-  --font-display:'Montserrat',system-ui,-apple-system,sans-serif;
-  --font-body:'Montserrat',system-ui,-apple-system,sans-serif;
-  --font-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --font-display:'Figtree',system-ui,-apple-system,sans-serif;
+  --font-body:'Figtree',system-ui,-apple-system,sans-serif;
+  --font-mono:'Figtree',system-ui,-apple-system,sans-serif;
   --tracking-label:0.14em;
 
   /* Space / radius / shadow / motion */
@@ -167,7 +167,7 @@ p{margin:0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6)}
 .stat{border-left:2px solid var(--green-500);padding-left:18px;display:flex;flex-direction:column;gap:var(--space-2);min-width:0}
 .stat-value{
-  font-family:var(--font-mono);font-size:1.25rem;font-weight:600;color:var(--text-strong);
+  font-family:var(--font-mono);font-size:1.375rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-strong);
   line-height:1.2;font-variant-numeric:tabular-nums;
 }
 .stat-label{font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
