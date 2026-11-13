@@ -20,6 +20,51 @@
 <link rel="stylesheet" href="styles.css">
 <script>document.documentElement.classList.add('js')</script>
 <script src="assets/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.graciousgardens-eb5.com/#developer",
+      "name": "Finishes Solutions",
+      "legalName": "Finishes Solutions LLC",
+      "description": "A fully-integrated real estate development and operations firm.",
+      "url": "https://www.finishessolutions.com/",
+      "email": "EB5admin@finishessolutions.com",
+      "areaServed": {"@type": "Place", "name": "Waller, Texas, United States"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.graciousgardens-eb5.com/#website",
+      "url": "https://www.graciousgardens-eb5.com/",
+      "name": "Gracious Gardens EB-5",
+      "inLanguage": "en",
+      "publisher": {"@id": "https://www.graciousgardens-eb5.com/#developer"}
+    },
+    {
+      "@type": "ApartmentComplex",
+      "@id": "https://www.graciousgardens-eb5.com/#project",
+      "name": "Gracious Gardens",
+      "description": "A ten-building apartment community in Waller, Texas, approved by USCIS under the EB-5 Immigrant Investor Program.",
+      "url": "https://www.graciousgardens-eb5.com/",
+      "image": "https://www.graciousgardens-eb5.com/assets/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Waller",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Buildings", "value": "10"},
+        {"@type": "PropertyValue", "name": "Developer and operator", "value": "Finishes Solutions"},
+        {"@type": "PropertyValue", "name": "EB-5 area type", "value": "High Unemployment Targeted Area"},
+        {"@type": "PropertyValue", "name": "USCIS Form I-956F approved", "value": "2026-02-19"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -46,8 +91,8 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">EB-5 Immigrant Investor Program</p>
-          <h1><span class="line"><span>Gracious</span></span> <span class="line"><span>Gardens</span></span></h1>
-          <p class="lede">A ten-building apartment community in Waller, Texas, approved by USCIS under the EB-5 Immigrant Investor Program.</p>
+          <h1><span class="line"><span>Gracious</span></span> <span class="line"><span>Gardens</span></span> <span class="line h1-sub"><span>EB-5 immigrant investor project &middot; Waller, Texas</span></span></h1>
+          <p class="lede">A ten-building apartment community approved by USCIS under the EB-5 Immigrant Investor Program.</p>
           <div class="btn-group">
             <a class="btn btn-primary btn-lg" href="https://bookings.cloud.microsoft/book/GraciousGardensEB51@finishesetc.net/" target="_blank" rel="noopener">Schedule a Consultation<span class="visually-hidden"> (opens in a new tab)</span></a>
             <a class="btn btn-ghost btn-lg" href="#what-is-eb5">What EB-5 is</a>
