@@ -1,12 +1,9 @@
 // Gracious Gardens — Google Analytics 4.
-// Inert until MEASUREMENT_ID is set: with the placeholder in place this file
-// loads nothing, sets no cookies and sends no requests, so it is safe to ship
-// before the GA4 property exists.
-//
-// To switch it on: create the GA4 property, then replace the placeholder below
-// with that property's measurement ID (Admin -> Data streams -> your stream).
+// The measurement ID is not a secret: GA4 ships it to every visitor in this
+// file, so it belongs in the repo. The guard below means a blank or malformed
+// ID disables analytics outright rather than loading a broken tag.
 (() => {
-  const MEASUREMENT_ID = 'G-XXXXXXXXXX';
+  const MEASUREMENT_ID = 'G-JYH753W1F3';
 
   if (!/^G-[A-Z0-9]+$/.test(MEASUREMENT_ID)) return;
 
